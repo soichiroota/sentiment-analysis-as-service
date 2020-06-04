@@ -1,0 +1,21 @@
+version: '3.5'
+
+services:
+
+  web:
+    image: web
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    volumes:
+      - '.:/usr/src/app'
+    ports:
+      - 80:80
+    environment:
+      - DEBUG=True
+      - PYTHONUNBUFFERED=0
+      - PORT=80
+      - LIBRARY=polyglot
+      - LANG=en
+      - 'MECAB_ARG=-d /usr/local/lib/mecab/dic/mecab-ipadic-neologd'
+    command: python3 api.py
