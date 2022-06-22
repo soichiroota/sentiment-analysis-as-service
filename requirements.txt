@@ -1,5 +1,5 @@
 Morfessor==2.0.6
-numpy==1.18.4
+numpy==1.22.0
 oseti==0.2
 polyglot==16.7.4
 pycld2==0.41
